@@ -1,0 +1,169 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-person-walking-luggage{
+    color : #20c7d4;
+    font-size: 2rem;
+}
+
+.website-name{
+    color : #20c7d4;
+    font-size: 1.5rem;
+    display: block;         /* Ensure it's treated as a block element */
+    text-align: left;       /* Align text inside it to the left */
+    margin-left: 0;  
+    text-decoration: none;
+}
+
+.nav-link{
+    color: #222222 !important; 
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links, 
+.f-info-socials,
+.f-info-brand  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.card-text-show {
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn {
+    background-color : #20c7d4 !important;
+    border: none !important;
+}
+
+.edit-btn {
+    background-color : #20c7d4!important;
+    border: none !important;
+}
+
+/* Show - page */
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fa-tag {
+    color : #20c7d4;
+}
+
+.fa-location-dot{
+    color : #20c7d4;
+}
+
+.btn-search {
+    background-color: #20c7d4 !important;
+    color: #fff !important;
+    border: 1px solid #20c7d4 !important;
+}
+
+.btn-search:hover {
+    background-color: #fff !important;
+    color: #20c7d4 !important;
+    border: 1px solid #20c7d4 !important;
+}
+
+.btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-inp {
+    padding: 0.5rem 3rem 0.5rem 3rem !important;
+}
+
+.btn-back{
+    background-color: #20c7d4 !important;
+    color: #fff !important;
+    border: 1px solid #20c7d4 !important;
+}
+
+.btn-back:hover {
+    background-color: #fff !important;
+    color: #20c7d4 !important;
+    border: 1px solid #20c7d4 !important;
+}

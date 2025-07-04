@@ -1,0 +1,114 @@
+<% layout("/layouts/boilerplate") %>
+<%= success %>
+
+   <style>
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+   </style>
+
+    <div id="filters">
+        <a href="/listings" class="filter text-decoration-none text-dark text-center">
+            <div><i class="fa-solid fa-border-all"></i></div>
+            <p>All</p>
+        </a>
+
+        <a href="/listings?category=Cities" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Cities') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-city"></i></div>
+            <p>Cities</p>
+        </a>
+
+        <a href="/listings?category=Mountains" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Mountains') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-mountain"></i></div>
+            <p>Mountains</p>
+        </a>
+
+        <a href="/listings?category=Beaches" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Beaches') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>Beaches</p>
+        </a>
+
+        <a href="/listings?category=Pools" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Pools') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Pools</p>
+        </a>
+
+        <a href="/listings?category=Farms" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Farms') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-tractor"></i></div>
+            <p>Farms</p>
+        </a>
+
+        <a href="/listings?category=Resorts" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Resorts') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-hotel"></i></div>
+            <p>Resorts</p>
+        </a>
+
+        <a href="/listings?category=Forests" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Forests') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-tree"></i></div>
+            <p>Forests</p>
+        </a>
+        
+        <a href="/listings?category=Heritage" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Heritage') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-archway"></i></div>
+            <p>Heritage</p>
+        </a>
+
+        <a href="/listings?category=Arctic" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Arctic') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-snowflake"></i></div>
+            <p>Arctic</p>
+        </a>
+
+        <a href="/listings?category=Premium" 
+            class="filter text-decoration-none text-dark text-center <% if (category === 'Premium') { %>active-filter<% } %>">
+            <div><i class="fa-solid fa-crown"></i></div>
+            <p>Premium</p>
+        </a>
+    </div>
+
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <% for(let listing of listings) { %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card col listing-card">
+                <img 
+                    src="<%= listing.image.url %>" 
+                    class="card-img-top" 
+                    alt="listing_image" 
+                    style="height: 20rem"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                    <p class="card-text-show">
+                        <b><%= listing.title %></b> <br>
+                        &#8377 <%= listing.price.toLocaleString("en-IN") %> / night
+                    </p>
+                </div>
+            </div>
+            </a>
+        <%} %>
+    </div>
+
