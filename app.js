@@ -69,12 +69,6 @@ const sessionOptions = {
 };
 
 
-
-
-// app.get("/", (req,res) =>{
-//     res.send("Hi, I am root");
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -102,12 +96,17 @@ app.use((req, res, next) =>{
 //     res.send(registeredUser);
 // })
 
+
+app.get("/", (req,res) =>{
+    res.redirect("/listings");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 
-//there is something not working in this block
+//issue resolved
 app.all("*", (req, res, next) => {
    throw new ExpressError(400, "Page Not Found!");
 });
