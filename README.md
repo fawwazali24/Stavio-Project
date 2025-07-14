@@ -15,9 +15,9 @@ Check out the live version of Stavio:
 
 - **Frontend:** HTML, CSS, JavaScript, EJS (Embedded JavaScript Templates)
 - **Backend:** Node.js, Express.js
-- **Database:** MongoDB + Mongoose
+- **Database:** MongoDB (hosted on MongoDB Atlas) + Mongoose
 - **Authentication:** Passport.js (Local Strategy)
-- **Other Tools:** Express-session, Method-Override, Flash Messages
+- **Other Tools:** Cloudinary (image uploads & storage), Express-session, Method-Override, Flash Messages
 
 ---
 
@@ -26,7 +26,7 @@ Check out the live version of Stavio:
 - **User Authentication**: Register, login, logout
 - **Authorization**: Only owners can edit or delete their own listings
 - **Listings**:
-  - Add new listings
+  - Add new listings with image uploads
   - Edit or delete your listings
   - View all listings
 - **Reviews**:
